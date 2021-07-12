@@ -29,11 +29,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 
   /* outline: 2px solid violet; */
 }
@@ -108,9 +103,10 @@ body {
   text-decoration: none;
   margin-right: 50px;
 }
-.email-link:hover,
-.email-link:focus {
-  color: #2196f3;
+.hed-nav {
+  display: flex;
+}
+.hed-nav:hover .header-nav {
 }
 .tel-link {
   font-style: normal;
@@ -121,18 +117,18 @@ body {
   color: #757575;
   text-decoration: none;
 }
-.tel-link:hover,
-.tel-link:focus {
-  color: var(--back-button-focus-hover);
-}
 .navigate-icon {
   margin-right: 10px;
   fill: var(--main-text-color);
 }
-.navigate-icon:hover,
-.navigate-icon:focus {
+.email-link:hover,
+.email-link:focus,
+.email-link:hover .navigate-icon,
+.email-link:focus .navigate-icon {
+  color: var(--accent-color-focus);
   fill: var(--accent-color-focus);
 }
+/* ==================END-HEADER================== */
 /* Main page */
 .hero {
   background-image: linear-gradient(
@@ -280,6 +276,7 @@ body {
 .icon-section-list > .icon-galery:not(:last-child) {
   margin-right: 30px;
 }
+/* ====================END-TECHNOLOGY=================== */
 /* Team */
 .section-team {
   padding-bottom: 94px;
@@ -377,14 +374,14 @@ body {
 .team-link > .team-social:not(:last-child) {
   margin-right: 10px;
 }
-.team-link > .team-social:hover,
-.team-link > .team-social:focus {
-  background-color: var(--accent-color-focus);
-}
 .application-team:hover,
-.application-team:focus {
+.application-team:focus,
+.application-team:hover .socisl-list,
+.application-team:focus .socisl-list {
+  background-color: var(--accent-color-focus);
   fill: #ffffff;
 }
+/* =====================END-TEAM-SECTION=================== */
 /* Logo-company */
 .list-client {
   display: flex;
@@ -402,6 +399,7 @@ body {
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
+  fill: var(--social-link);
 }
 .logo-company {
   padding-top: 94px;
@@ -429,10 +427,13 @@ body {
 .client-page:focus {
   border: 1px solid var(--accent-color-focus);
 }
-.icon-company:hover,
-.icon-company:focus {
+.client-page:hover,
+.client-page:focus,
+.client-page:hover .icon-company,
+.client-page:focus .icon-company {
   fill: var(--accent-color-focus);
 }
+/* ==========================END-OUR-CLIENTS===================== */
 /* Footer */
 
 .footer {
@@ -550,11 +551,16 @@ body {
 .application {
   border-radius: 50%;
 }
-.application:hover,
+/* .application:hover,
 .application:focus {
   background-color: var(--accent-color-focus);
+} */
+.icon-social:hover,
+.icon-social:focus,
+.icon-social:hover .social-list,
+.icon-social:focus .socisl-list {
+  background-color: var(--accent-color-focus);
 }
-
 /* Portfolio */
 .container {
   width: 1200px;
